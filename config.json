@@ -1,0 +1,121 @@
+{
+  "network": {
+    "chainId": 84532,
+    "rpc": {
+      "urls": [
+        "https://sepolia.base.org"
+      ],
+      "timeoutMs": 10000,
+      "retryDelay": 2000,
+      "maxRetries": 5
+    }
+  },
+  
+  "contracts": {
+    "priorToken": "0xeFC91C5a51E8533282486FA2601dFfe0a0b16EDb",
+    "usdcToken": "0xdB07b0b4E88D9D5A79A08E91fEE20Bb41f9989a2",
+    "swapRouter": "0x8957e1988905311EE249e679a29fc9deCEd4D910",
+    "faucet": "0xa206dC56F1A56a03aEa0fCBB7c7A62b5bE1Fe419"
+  },
+  
+  "gasSettings": {
+    "faucet": {
+      "gasLimitMin": 95000,
+      "gasLimitMax": 120000,
+      "maxFeePerGas": "0.0014",
+      "maxPriorityFeePerGas": "0.0009",
+      "maxRetries": 3,
+      "retryMultiplier": 1.3
+    },
+    "approve": {
+      "gasLimitMin": 47000,
+      "gasLimitMax": 55000,
+      "maxFeePerGas": "0.0014",
+      "maxPriorityFeePerGas": "0.0009",
+      "maxRetries": 3,
+      "retryMultiplier": 1.3
+    },
+    "swap": {
+      "gasLimitMin": 91000,
+      "gasLimitMax": 150000,
+      "maxFeePerGas": "0.0014",
+      "maxPriorityFeePerGas": "0.0009",
+      "maxRetries": 3,
+      "retryMultiplier": 1.3
+    }
+  },
+  
+  "delays": {
+    "betweenWallets": {
+      "min": 20000,
+      "max": 40000
+    },
+    "betweenTransactions": {
+      "min": 5000,
+      "max": 15000
+    },
+    "afterFaucet": {
+      "min": 8000,
+      "max": 12000
+    },
+    "betweenRounds": {
+      "min": 3600000,
+      "max": 7200000
+    },
+    "walletCheckInterval": 30000
+  },
+  
+  "transactions": {
+    "minTransactionsPerWallet": 5,
+    "maxTransactionsPerWallet": 6,
+    "patterns": {
+      "includeExtraPatterns": true,
+      "alwaysStartWithPriorToUsdc": true
+    },
+    "autoRetry": true,
+    "maxRetries": 3,
+    "minBalanceThresholds": {
+      "prior": "0.1",
+      "usdc": "0.1"
+    }
+  },
+  
+  "wallets": {
+    "maxConcurrent": 3,
+    "runForever": true,
+    "cycleInterval": 43200000,
+    "randomizeOrder": true,
+    "requireFaucet": true
+  },
+  
+  "logging": {
+    "level": "debug",
+    "showDebugMessages": true,
+    "colorize": true,
+    "logToFile": true,
+    "logFilePath": "./logs/prior-bot.log",
+    "maxLogFileSize": "10m",
+    "maxLogFiles": 5
+  },
+  
+  "api": {
+    "reporting": {
+      "enabled": true,
+      "endpointUrl": "https://prior-protocol-testnet-priorprotocol.replit.app/api/transactions",
+      "timeout": 10000,
+      "retryCount": 3
+    },
+    "mining": {
+      "enabled": true,
+      "activationUrl": "https://prior-stake-priorprotocol.replit.app/api/activate",
+      "timeout": 8000,
+      "retryCount": 2
+    }
+  },
+  
+  "proxy": {
+    "enabled": false,
+    "file": "./proxies.txt",
+    "rotateWithWallets": true
+  }
+} 

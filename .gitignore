@@ -1,0 +1,28 @@
+# 環境變量和私鑰
+.env
+wallets.txt
+proxies.txt
+
+# 配置文件（根據需要排除）
+# config.json
+
+# 日誌文件
+logs/
+*.log
+
+# 依賴
+node_modules/
+
+# 編輯器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系統文件
+.DS_Store
+Thumbs.db
+
+# 臨時文件
+*.tmp
+*.temp 

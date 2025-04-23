@@ -1,0 +1,29 @@
+{
+  "name": "prior-protocol-testnet-bot",
+  "version": "1.0.0",
+  "description": "Prior Protocol 測試網交互",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "prior-protocol",
+    "blockchain",
+    "bot",
+    "base-sepolia"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.7.2",
+    "dotenv": "^16.3.1",
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2",
+    "axios": "^1.6.2",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4"
+  }
+} 

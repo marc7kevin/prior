@@ -1,0 +1,5 @@
+# 實際使用時請替換為真實的私鑰並重命名為 wallets.txt
+# 每行一個私鑰
+# 可以使用 # 添加註釋行 
+0xabcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890
+0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
